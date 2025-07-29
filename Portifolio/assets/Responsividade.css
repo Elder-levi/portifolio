@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+--primay-color: #f0f0f0;
+--primary-bg-color:#111217;
+
+--secondary-bg-color:#28292E;
+--border-color:#28292E;
+--title-color:#f0f0f0;
+
+--text-color:#9a9a9c;
+--link-color:#9a9a9c;
+--icon-color:#c7c8c9;
+}
+
+*{
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+   vertical-align: baseline;
+   list-style: none;
+}
+
+body{
+    background: var(--primary-bg-color);
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+  text-decoration: none;  
+}
+
+i{
+    color: var(--icon-color);
+}
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  z-index: 2;
+}
+
+ .header__toggle{
+        display: flex;
+       justify-content: flex-end;
+    }
+
+.header__brand .brand__logo{
+  height: 3.25rem;
+  width: 3.525rem;  
+}
+
+#toggLeTheme{
+font-size: 1.5rem;
+color: var(--primay-color);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+}
+
+
+.menu__item{
+    width: 100%;
+}
+
+.menu--mobile{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+   border: 1px solid var(--border-color) ;
+}
+
+.menu--mobile .menu__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.625rem ;
+}
+
+.menu__icon.active .menu__text, 
+.menu__icon.active .menu__icon,
+.menu__icon:hover .menu__text,  
+.menu__icon:hover .menu__icon {
+color: var(--primay-color);
+font-weight: 600;
+}
+.menu__icon .menu__text{
+color: var(--text-color);
+}
+.menu__icon {
+font-size:  1.5rem;
+}
+.menu__text {
+font-size:  .75rem;
+text-transform: uppercase;
+}
+
+
+.header__nav{
+    display: none;
+}
+
+
+.menu--principal{
+    gap: 1rem;
+}
+@media (min-width:768px) {
+
+    .header{
+    
+    position: fixed;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 6rem;
+    background: var(--primary-bg-color);
+    }
+    .nav--mobile{
+        display: none;
+
+    }
+    .header__nav{
+        display: flex;
+    }
+     .header__nav,
+    .header__toggle{
+        min-width:30%;
+    }
+}
+@media( min-width:1400px){
+
+}
